@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-[#f4f5f7] h-[100vh]">
+<body class="bg-[#f4f5f7] min-h-[100vh]">
 <div class="bg-white rounded-b-xl mx-auto max-w-lg">
         <div  class="mx-auto max-w-lg flex justify-between items-center min-h[50px] border-b-1 border-gray-300" >
         <div class="flex ">
@@ -30,12 +30,12 @@
         <p class=" ">Enjoy easy and convenient financial services with us.<br> Cashout charge is low and </p>
     </div>
     <!-- card 6 -->
-    <div class="mx-auto mt-8 max-w-lg min-h-[200px] text-center grid grid-cols-3 gap-5 p-4">
-        <div class="border-2 border-gray-300 rounded-xl">
+    <div  class="mx-auto mt-8 max-w-lg min-h-[200px] text-center grid grid-cols-3 gap-5 p-4">
+        <div id="add-btn" class="border-2 border-gray-300 rounded-xl">
             <img src="assets/wallet1.png" class="mx-auto mt-3" alt="">
             <h3>Add Money</h3>
         </div>
-        <div class="border-2 border-gray-300 rounded-xl">
+        <div id="cash-out-btn" class="border-2 border-gray-300 rounded-xl">
             <img src="assets/send1.png" class="mx-auto mt-3" alt="">
             <h3>Cashout</h3>
         </div>
@@ -57,11 +57,12 @@
         </div>
     </div>
 </div>
-<!-- section create -->
-<div class="all-section mx-auto max-w-lg ">
+<!-- section create Add money -->
+<div class="all-section mx-auto max-w-lg">
+    <div id="add-money-parent">
     <h1 class="font-bold my-5">Add Money</h1>
-<div class="p-3 min-h-[400px] bg-white rounded-xl">
-    <div >
+<form class="p-3 min-h-[400px] bg-white rounded-xl">
+    <div>
         <label for="" class="font-semibold ">Select A Bank</label><br>
         <select id="select-bank" class="select w-full rounded-3xl bg-[#f4f5f7] my-3">
         <option disabled selected>Select back</option>
@@ -72,7 +73,8 @@
     </div>
     <div> 
         <label for="" class="font-semibold">Bank Account Number</label><br>
-        <input type="text" id="bank-account-number" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Enter 11 digit account number" /></div>
+        <input type="text" id="bank-account-number" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Enter 11 digit account number" />
+    </div>
     <div>
         <label for="" class="font-semibold">Amount to Add</label><br>
         <input type="text" id="amount-add" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Add Amount to withdraw" />
@@ -80,12 +82,35 @@
     <div>
         <label for="" class="font-semibold">Pin Number</label><br>
         <input type="text" id="pin-number" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Enter 4 digit pin number" />
-        
-    </div>
-    <button id="add-money" class="mt-3 rounded-3xl w-[320px] btn bg-[#0874f2] text-white w-full">Add Money</button>
+        <button id="add-money" class="mt-3 rounded-3xl w-[320px] btn bg-[#0874f2] text-white w-full">Add Money</button>
+        </div>
+    
+</form>
+</div>
 </div>
 
+<!-- Cash out  -->
+
+<div id="cash-out-parent" class="mx-auto max-w-lg" style=" display: none;">
+    <h1 class="font-bold mx-auto max-w-lg  my-5">Cash out</h1>
+    <form class="p-3 min-h-[400px] bg-white rounded-xl">
+    <div> 
+        <label for="" class="font-semibold">Agent Number</label><br>
+        <input type="text" id="agent-number" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Enter 11 digit number" />
+    </div>
+    <div>
+        <label for="" class="font-semibold">Amount</label><br>
+        <input type="text" id="cash-out-amount" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Enter amount to withdraw" />
+    </div>
+    <div>
+        <label for="" class="font-semibold">Pin Number</label><br>
+        <input type="text" id="cashout-pin-number" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Enter amount to withdraw" />
+        <button id="withdraw-money" class="mt-3 rounded-3xl w-[320px] btn bg-[#0874f2] text-white w-full ">Withdraw Money</button>
+        </div>
+    
+</form>
 </div>
-<script src="home.js"></script>
+
+<script src="home.js "></script>
 </body>
 </html>
