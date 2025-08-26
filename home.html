@@ -16,7 +16,7 @@
         <div class="flex ">
             <img src="assets/Group.png" alt="">
             <div class="ml-4 mt-3">
-                <h1 class="font-bold">$45000</h1>
+                <h1 class="font-bold">$ <span id="available-balance">45000</span></h1>
                 <p>Available Balance</p>
             </div>
         </div>
@@ -24,10 +24,12 @@
            <button class="btn"><i class="fa-solid fa-arrow-up-from-bracket -rotate-90"></i>Log Out</button>
         </div>
     </div>
+    <!-- welcome to payoo -->
     <div class="mx-auto mt-8 max-w-lg p-4">
         <h1 class="font-bold">🔥 Welcome to Payooo!</h1>
         <p class=" ">Enjoy easy and convenient financial services with us.<br> Cashout charge is low and </p>
     </div>
+    <!-- card 6 -->
     <div class="mx-auto mt-8 max-w-lg min-h-[200px] text-center grid grid-cols-3 gap-5 p-4">
         <div class="border-2 border-gray-300 rounded-xl">
             <img src="assets/wallet1.png" class="mx-auto mt-3" alt="">
@@ -55,5 +57,35 @@
         </div>
     </div>
 </div>
+<!-- section create -->
+<div class="all-section mx-auto max-w-lg ">
+    <h1 class="font-bold my-5">Add Money</h1>
+<div class="p-3 min-h-[400px] bg-white rounded-xl">
+    <div >
+        <label for="" class="font-semibold ">Select A Bank</label><br>
+        <select id="select-bank" class="select w-full rounded-3xl bg-[#f4f5f7] my-3">
+        <option disabled selected>Select back</option>
+        <option>Sonali bank</option>
+        <option>Datch bangla bank</option>
+        <option>Islami bank</option>
+</select>
+    </div>
+    <div> 
+        <label for="" class="font-semibold">Bank Account Number</label><br>
+        <input type="text" id="bank-account-number" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Enter 11 digit account number" /></div>
+    <div>
+        <label for="" class="font-semibold">Amount to Add</label><br>
+        <input type="text" id="amount-add" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Add Amount to withdraw" />
+    </div>
+    <div>
+        <label for="" class="font-semibold">Pin Number</label><br>
+        <input type="text" id="pin-number" class="bg-[#f4f5f7] rounded-3xl input my-3 w-full" placeholder="Enter 4 digit pin number" />
+        
+    </div>
+    <button id="add-money" class="mt-3 rounded-3xl w-[320px] btn bg-[#0874f2] text-white w-full">Add Money</button>
+</div>
+
+</div>
+<script src="home.js"></script>
 </body>
 </html>
